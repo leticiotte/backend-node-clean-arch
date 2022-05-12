@@ -24,7 +24,6 @@ export class ListUnitsAndAssetsByCompanyIdController implements Controller {
       const units = await this.listUnits.list(companyId);
       const unitsWithAssets : UnitsWithAssets[] = []
       for (const unit of units) {
-        console.log(unit)
         const unitId = unit._id
         const assets = await this.listAssets.list(unitId);
         const unitWithAssets : UnitsWithAssets = {

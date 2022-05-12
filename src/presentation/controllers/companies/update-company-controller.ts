@@ -28,7 +28,6 @@ export class UpdateCompanyController implements Controller {
         cnpj
       }
       const result = await this.updateCompany.update(company)
-      console.log(result)
       if(!result) return notFound();
       return ok({company});
     } catch (error) {

@@ -38,7 +38,6 @@ export class UpdateUnitController implements Controller {
         description
       }
       const result = await this.updateUnit.update(unit)
-      console.log(result)
       if(!result) return notFound();
       return ok({unit});
     } catch (error) {

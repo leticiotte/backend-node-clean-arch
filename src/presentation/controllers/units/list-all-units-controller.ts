@@ -8,7 +8,6 @@ export class ListUnitsController implements Controller {
   async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
       const filter = httpRequest.queryParameters?.companyId
-      console.log(filter)
       const result = await this.listUnits.list(filter);
       if(!result) return notFound();
       return ok({ companyId: filter, units: result});

@@ -46,7 +46,6 @@ export class UpdateAssetController implements Controller {
         healthLevel
       }
       const result = await this.updateAsset.update(asset)
-      console.log(result)
       if(!result) return notFound();
       return ok({asset});
     } catch (error) {

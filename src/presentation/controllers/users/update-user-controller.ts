@@ -38,7 +38,6 @@ export class UpdateUserController implements Controller {
         cpf
       }
       const result = await this.updateUser.update(user)
-      console.log(result)
       if(!result) return notFound();
       return ok({user});
     } catch (error) {
