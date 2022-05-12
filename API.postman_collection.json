@@ -1,0 +1,576 @@
+{
+	"info": {
+		"_postman_id": "92437a13-e7fc-4a70-846e-5c9b1de10064",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "assets",
+			"item": [
+				{
+					"name": "{assetId}",
+					"item": [
+						{
+							"name": "Get asset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/assets/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"assets",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete asset",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/assets/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"assets",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update asset",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Asset de teste\",\r\n    \"description\": \"Descrição do asset de teste\",\r\n    \"image\": \"https://example.com\",\r\n    \"model\": \"c4621\",\r\n    \"owner\": \"Letícia\",\r\n    \"status\": \"Running\",\r\n    \"healthLevel\": 101\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/assets/627b1a8473c99bff24d1ed5d",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"assets",
+										"627b1a8473c99bff24d1ed5d"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create asset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Asset de teste\",\r\n    \"description\": \"Descrição do asset de teste\",\r\n    \"image\": \"https://example.com\",\r\n    \"model\": \"c4621\",\r\n    \"owner\": \"Letícia\",\r\n    \"status\": \"Running\",\r\n    \"healthLevel\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/units/627c4bbace2e584747dc672a/assets",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"units",
+								"627c4bbace2e584747dc672a",
+								"assets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get asset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/assets",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"assets"
+							],
+							"query": [
+								{
+									"key": "unitId",
+									"value": "627c4c51ce2e584747dc6735",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "companies",
+			"item": [
+				{
+					"name": "{companyId}",
+					"item": [
+						{
+							"name": "stats",
+							"item": [
+								{
+									"name": "Get units and assets by companyId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/companies/627bad09873cf60ba828b729/stats",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"companies",
+												"627bad09873cf60ba828b729",
+												"stats"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Get company",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/companies/627bacca588a5ab7a065bec6",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies",
+										"627bacca588a5ab7a065bec6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete company",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/companies/627bacca588a5ab7a065bec6",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies",
+										"627bacca588a5ab7a065bec6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update company",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Company teste editadaaaaa\",\r\n    \"email\": \"company@email.com\",\r\n    \"cnpj\": \"56456465465465465\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/companies/627bacca588a5ab7a065bec6",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies",
+										"627bacca588a5ab7a065bec6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get companies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/companies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Company teste\",\r\n    \"email\": \"company@email.com\",\r\n    \"cnpj\": \"56456465465465465\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/companies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "units",
+			"item": [
+				{
+					"name": "{unitId}",
+					"item": [
+						{
+							"name": "Get unit",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/units/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"units",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete unit",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/units/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"units",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update unit",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"companyId\": \"4\",\r\n    \"name\": \"Letíciaaaa\",\r\n    \"email\": \"leticia@email.com\",\r\n    \"cpf\": \"44444444444\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/units/627b1a8473c99bff24d1ed5d",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"units",
+										"627b1a8473c99bff24d1ed5d"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create unit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Unit de teste 2\",\r\n    \"description\": \"Descrição unit de teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/companies/627bad09873cf60ba828b729/units",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"companies",
+								"627bad09873cf60ba828b729",
+								"units"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get unit",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyId\": \"1\",\r\n    \"name\": \"Letícia\",\r\n    \"email\": \"leticia@email.com\",\r\n    \"cpf\": \"44444444444\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/units?companyId=627bad09873cf60ba828b729",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"units"
+							],
+							"query": [
+								{
+									"key": "companyId",
+									"value": "627bad09873cf60ba828b729"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "{userId}",
+					"item": [
+						{
+							"name": "Get user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/627b1a8473c99bff24d1ed5d",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"627b1a8473c99bff24d1ed5d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/627b1a8473c99bff24d1ed5d",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"627b1a8473c99bff24d1ed5d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update user",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"companyId\": \"4\",\r\n    \"name\": \"Letíciaaaa\",\r\n    \"email\": \"leticia@email.com\",\r\n    \"cpf\": \"44444444444\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/companies/627bad09873cf60ba828b729/users/627b1f251f699fb8f11b509f",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"companies",
+										"627bad09873cf60ba828b729",
+										"users",
+										"627b1f251f699fb8f11b509f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Letíciaaa\",\r\n    \"email\": \"leticia@email.com\",\r\n    \"cpf\": \"44444444444\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/companies/627bad09873cf60ba828b729/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"companies",
+								"627bad09873cf60ba828b729",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyId\": \"1\",\r\n    \"name\": \"Letícia\",\r\n    \"email\": \"leticia@email.com\",\r\n    \"cpf\": \"44444444444\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "companyId",
+									"value": "627bad09873cf60ba828b729",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		}
+	]
+}
